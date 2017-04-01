@@ -4,21 +4,44 @@
 import numpy as np
 
 if __name__ == '__main__':
-    mat1 = np.array([1, 3])
-    mat1 = np.mat(mat1)  # mat 函数将目标数据的类型转换为矩阵（matrix）
-    print mat1
-    # 1 行 2 列的矩阵（也称 1 * 2 矩阵）
-    # ==> [[1 3]]
+    # 矩阵相乘
+    mat1 = np.mat([1, 3])
+    mat2 = np.mat([[3], [4]])
+    mat3 = mat1 * mat2
+    print mat3
+    # 1 * 2 矩阵乘以 2 * 1 矩阵，得到 1 * 1 矩阵
+    # ==> [[15]]
 
-    print ''
+    print
 
-    mat2 = np.array([[1, 3], [3, 4]])
-    mat2 = np.mat(mat2)
-    print mat2
-    # 2 * 2 矩阵
-    # ==> [[1 3]
-    # ==>  [3 4]]
+    # 矩阵求逆
+    mat4 = np.mat([[1, 0, 1], [0, 2, 1], [1, 1, 1]])
+    mat5 = mat4.I  # I 对应 getI(self) ，返回可逆矩阵的逆
+    print mat5
+    # 矩阵的逆
+    # ==> [[-1. -1.  2.]
+    # ==>  [-1.  0.  1.]
+    # ==>  [ 2.  1. -2.]]
 
-    # 获取矩阵的大小
-    print mat1.shape
-    print mat2.shape
+    print
+
+    # 矩阵求逆
+    mat6 = np.mat([[1, 1, 1], [0, 2, 1], [1, 1, 1]])
+    mat7 = mat6.T  # I 对应 getT(self) ，返回矩阵的转置矩阵
+    print mat7
+    # 矩阵的转置矩阵
+    # ==> [[1 0 1]
+    # ==>  [1 2 1]
+    # ==>  [1 1 1]]
+
+    print
+
+    # 矩阵每一列的和
+    sum1 = mat6.sum(axis=0)
+    print sum1
+    # 矩阵每一行的和
+    sum2 = mat6.sum(axis=1)
+    print sum2
+    # 矩阵所有行列的总和
+    sum3 = sum(mat6[1, :])
+    print sum3
