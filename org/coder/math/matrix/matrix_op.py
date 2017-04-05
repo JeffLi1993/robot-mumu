@@ -25,7 +25,7 @@ if __name__ == '__main__':
 
     print
 
-    # 矩阵求逆
+    # 转置矩阵
     mat6 = np.mat([[1, 1, 1], [0, 2, 1], [1, 1, 1]])
     mat7 = mat6.T  # I 对应 getT(self) ，返回矩阵的转置矩阵
     print mat7
@@ -45,3 +45,13 @@ if __name__ == '__main__':
     # 矩阵所有行列的总和
     sum3 = sum(mat6[1, :])
     print sum3
+
+    print
+
+    # 矩阵与数组之间的转换
+    mat8 = np.mat([[1, 2, 3]])
+    arr1 = np.array(mat8)  # 矩阵转换成数组
+    print arr1
+    arr2 = [1, 2, 3]
+    mat9 = np.mat(arr2)  # 数组转换成矩阵
+    print mat9

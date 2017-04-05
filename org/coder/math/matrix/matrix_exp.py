@@ -26,9 +26,9 @@ if __name__ == '__main__':
     print
 
     mat3 = np.zeros((2, 3))  # 2 * 3 的全 0 矩阵
-    mat4 = np.ones((3, 2))  # 3 * 2 的全 1 矩阵
-    mat5 = np.identity(3)  # 3 * 3 的单元矩阵
-    mat6 = np.eye(3, 3, 0)  # eye(N, M=None, k=0, dtype=float) 对角线是 1 其余值为 0 的矩阵, k 指定对角线的位置
+    mat4 = np.ones((3, 2))   # 3 * 2 的全 1 矩阵
+    mat5 = np.identity(3)    # 3 * 3 的单元矩阵
+    mat6 = np.eye(3, 3, 0)   # eye(N, M=None, k=0, dtype=float) 对角线是 1 其余值为 0 的矩阵, k 指定对角线的位置
     print mat3
     print mat4
     print mat5
